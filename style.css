@@ -1,36 +1,52 @@
-/* style.css */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #fff8f2;
+  font-family: 'Montserrat', sans-serif;
+  background: #fffaf6;
   color: #333;
 }
 
+/* Header */
 header {
   background: #ff7043;
   color: white;
-  padding: 15px;
+  padding: 20px;
   text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 header nav a {
   color: white;
-  margin: 0 10px;
+  margin: 0 15px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Banner */
 .banner {
-  background: url("https://picsum.photos/1200/400?bakery") center/cover no-repeat;
+  background: url("https://i.imgur.com/xNexfoM.jpg") center/cover no-repeat;
   color: white;
   text-align: center;
-  padding: 80px 20px;
+  padding: 100px 20px;
+}
+
+.banner-text {
+  background: rgba(0,0,0,0.5);
+  display: inline-block;
+  padding: 30px;
+  border-radius: 12px;
 }
 
 .banner h2 {
   font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
+/* Botões */
 .btn {
   display: inline-block;
   background: #ff7043;
@@ -44,14 +60,30 @@ header nav a {
 }
 
 .btn:hover {
-  background: #e64a19;
+  transform: scale(1.05);
 }
 
+.btn.ifood { background: #d32f2f; }
+.btn.anota { background: #388e3c; }
+.btn.whatsapp-btn { background: #25d366; }
+
+/* Seções */
 section {
-  padding: 40px 20px;
+  padding: 50px 20px;
   text-align: center;
 }
 
+h2 {
+  color: #e64a19;
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-top: 40px;
+  color: #444;
+}
+
+/* Cardápio */
 .menu-grid {
   display: flex;
   justify-content: center;
@@ -61,21 +93,24 @@ section {
 
 .item {
   background: white;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 15px;
   width: 200px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.item:hover {
+  transform: translateY(-5px);
 }
 
 .item img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
-.btn.ifood { background: #d32f2f; }
-.btn.anota { background: #388e3c; }
-
-.whatsapp {
+/* WhatsApp Flutuante */
+.whatsapp-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -86,8 +121,14 @@ section {
   border-radius: 50%;
   text-decoration: none;
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: 0.3s;
 }
 
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
 footer {
   background: #333;
   color: white;
