@@ -24,12 +24,13 @@ header nav a {
 }
 
 header nav a:hover {
+  color: #ffd180;
   text-decoration: underline;
 }
 
 /* Banner */
 .banner {
-  background: url("https://i.imgur.com/xNexfoM.jpg") center/cover no-repeat;
+  background: url("https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
   color: white;
   text-align: center;
   padding: 100px 20px;
@@ -73,6 +74,10 @@ section {
   text-align: center;
 }
 
+#cardapio { background: #fff2e6; }
+#pedir { background: #fffaf6; }
+#contato { background: #ffece0; }
+
 h2 {
   color: #e64a19;
   margin-bottom: 20px;
@@ -108,6 +113,11 @@ h3 {
 .item img {
   width: 100%;
   border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.item img:hover {
+  transform: scale(1.05);
 }
 
 .item h4 {
@@ -133,10 +143,16 @@ h3 {
   text-decoration: none;
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
   transition: 0.3s;
+  animation: pulse 2s infinite;
 }
 
 .whatsapp-float:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
 }
 
 /* Footer */
@@ -145,4 +161,31 @@ footer {
   color: white;
   text-align: center;
   padding: 15px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .menu-grid {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  header nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .banner {
+    padding: 60px 20px;
+  }
+
+  .banner h2 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
 }
