@@ -1,3 +1,4 @@
+/* Fonte e cores básicas */
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -49,14 +50,13 @@ header nav a:hover {
 /* Botões */
 .btn {
   display: inline-block;
-  background: #ff7043;
-  color: white;
   padding: 12px 20px;
   margin: 10px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
+  color: white;
+  transition: transform 0.3s;
 }
 
 .btn:hover {
@@ -86,18 +86,19 @@ h3 {
 /* Cardápio */
 .menu-grid {
   display: flex;
-  justify-content: center;
-  gap: 20px;
   flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
 .item {
-  background: white;
+  background: #fff;
   border-radius: 12px;
   padding: 15px;
   width: 200px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-  transition: 0.3s;
+  text-align: center;
+  transition: transform 0.3s;
 }
 
 .item:hover {
@@ -109,7 +110,17 @@ h3 {
   border-radius: 10px;
 }
 
-/* WhatsApp Flutuante */
+.item h4 {
+  margin: 10px 0 5px;
+  color: #e64a19;
+}
+
+.item p {
+  color: #555;
+  font-weight: bold;
+}
+
+/* WhatsApp flutuante */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
